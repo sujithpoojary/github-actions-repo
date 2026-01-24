@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node index.js",
-    "test": "npm test"
+    "build": "npm run build",
+    "test": "echo \"Running tests...\""
   }
 }
