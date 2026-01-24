@@ -1,0 +1,9 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "build": "npm run build",
+    "test": "echo \"Running tests...\""
+  }
+}
