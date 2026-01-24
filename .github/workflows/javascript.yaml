@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "Running npm run Build..........."
-      - run: npm build
+      - run: npm run build
 
   test:
     runs-on: ubuntu-latest
