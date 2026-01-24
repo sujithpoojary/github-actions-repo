@@ -1,0 +1,6 @@
+name: trigger-another-workflow
+on: workflow_dispatch
+
+jobs:
+  triggerAnother:
+    uses: ./.github/workflows/secret.yaml
