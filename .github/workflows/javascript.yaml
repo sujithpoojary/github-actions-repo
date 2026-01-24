@@ -2,10 +2,21 @@ name: npm-build
 on: 
   push:
     branches: [main]
+  pull_request:
+    
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
-      - run: echo " Running TESTS"
-      - run: npm start
+      - run: echo "Running npm run Build..........."
+      - run: npm build
+
+  test:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Running npm test................"
+      - run: npm test
