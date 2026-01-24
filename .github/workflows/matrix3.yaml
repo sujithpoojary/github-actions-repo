@@ -1,0 +1,17 @@
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [18]
+        include:
+          - os: ubuntu-latest
+            node: 20
+
+    steps:
+      - run: |
+          echo "OS = ${{ matrix.os }}"
+          echo "Node = ${{ matrix.node }}"
