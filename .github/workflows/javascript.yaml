@@ -10,6 +10,7 @@ jobs:
     if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
       - run: echo "Running npm start..........."
       - run: npm start
 
@@ -18,5 +19,7 @@ jobs:
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
       - run: echo "Running npm test................"
+      - run: npm install
       - run: npm test
