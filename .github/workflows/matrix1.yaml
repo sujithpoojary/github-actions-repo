@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+       os: [ubuntu-latest, windows-latest]
        node: [16,18,20]
     steps:
-      - run: echo "NODE ${{ matrix.node }}"
-  
-        
+      - run: echo "OS ${{ matrix.os }} NODE ${{ matrix.node }}"
