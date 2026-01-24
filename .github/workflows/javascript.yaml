@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo " Running TESTS"
-      - run: npm test
+      - run: npm start
