@@ -1,0 +1,10 @@
+name: using composite action in workflow
+on: workflow_dispatch
+jobs:
+  composite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/hello
+        with:
+          name: sujith
